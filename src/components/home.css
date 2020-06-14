@@ -19,5 +19,12 @@
 }
 
 .balance {
-  font-size: large;
+  font-size: xx-large;
+}
+.otherBln {
+  font-size: x-large;
+}
+
+.new-size {
+  font-size: 1.3rem;
 }

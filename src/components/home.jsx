@@ -45,27 +45,27 @@ function Home() {
 
   return (
     <div className="text-white text-center">
-      <div>
+      <div className="border border-right-0 border-top-0 border-left-0 py-2">
         <h1 className="exp-h">Expense Tracker</h1>
       </div>
       <div>
-        <p className="exp-h">Your Balance</p>
+        <p className="exp-h h2">Your Balance</p>
         <span
           className={`balance ${total > 0 ? "text-success" : "text-danger"}`}
         >
           {total + " PKR"}
         </span>
       </div>
-      <div className="row ">
+      <div className="row mx-2">
         <div className="col-md-4"></div>
         <div className=" text-center col-md-4 backg ">
           <div className="border border-dark px-3 border-left-0">
             <h2>Income</h2>
-            <span className="text-success">{income + " PKR"}</span>
+            <span className="text-success otherBln">{income + " PKR"}</span>
           </div>
           <div className="border border-dark px-3 border-right-0">
             <h2>Expense</h2>
-            <span className="text-danger">{expense + " PKR"}</span>
+            <span className="text-danger otherBln">{expense + " PKR"}</span>
           </div>
           <div>
             <h4 className="text-left mt-3">History</h4>
@@ -84,11 +84,12 @@ function Home() {
               <br />
               <input
                 type="text"
-                className="w-100"
+                className="w-100 p-2"
                 autoComplete="false"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Type Description"
+                required
               />
               <br />
               <label htmlFor="number" className="h5 mt-2">
@@ -97,11 +98,12 @@ function Home() {
               <br />
               <input
                 type="number"
-                className="w-100"
+                className="w-100 p-2"
                 placeholder="Positive for Income & Negative for Expense"
                 autoComplete="false"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
+                required
               />
               <br />
               <button className="btn btn-light w-100 my-2 font-weight-bold">
